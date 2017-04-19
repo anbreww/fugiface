@@ -1,0 +1,44 @@
+.tap-page {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 auto;
+}
+
+.tap-container {
+  display: flex;
+  /*border: 1px solid black;*/
+  justify-content: space-around;
+  align-content: center;
+}
+
+.tap {
+  margin: 1em;
+  padding: 0.5em;
+  /*border: 1px solid black;*/
+  max-width: 200px;
+}
+
+.tapName h2 {
+  font-size: 40px;
+}
+
+.tapContent {
+  display:flex;
+  flex-flow: column;
+}
+
+.beer-name {
+  font-family: "Kalam", cursive;
+  font-size: 28px;
+}
+
+.beer-type {
+  font-family: "Kalam", cursive;
+  font-size: 18px;
+}
+
+.beer-description {
+  font-style:  normal;
+}
