@@ -24,7 +24,7 @@ class Tap extends Component {
         </div>
         <div className="tapContent">
           <span className="beer-name">{beer.name}</span>
-          <span className="beer-type">{beer.type}</span>
+          <span className="beer-type">{beer.style}</span>
           <p className="beer-description">{description}</p>
           <span className="beer-stats">{abv} ABV / {ibu} IBU</span>
         </div>

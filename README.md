@@ -16,3 +16,15 @@ commands to start a development server.
 npm install
 npm start
 ```
+
+### Setting up the database
+
+Fugiface currently uses Firebase to store the beer data, since it's really easy
+to setup and get running with. The app comes with a set of default beers to fill
+up the database when it's empty.
+
+You'll need to create a project on Firebase, make a copy of the `base_sample.js`
+file in the `src` folder, then replace the values by the keys you find in the
+"Add Firebase to your web app" section from your Firebase dashboard.
+
+Then just click the "Load Defaults" button to populate your database!

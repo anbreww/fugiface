@@ -5,7 +5,7 @@ import Tap from './Tap';
 
 class TapList extends React.Component {
   render() {
-    console.log(this.props.beers);
+    console.log('TapList loading:', this.props.beers);
     return (
       <div className="tap-page">
         <h2>Fûgidaire Taplist v3</h2>

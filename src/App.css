@@ -22,22 +22,35 @@
   to { transform: rotate(360deg); }
 }*/
 
-html, body, .viewport {
-  font-family: "Lato", sans-serif;
-  display: flex;
-  flex-flow: column;
-  flex: 1;
-  height: 100%;
+html,
+body,
+.viewport {
+    font-family: "Lato", sans-serif;
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    height: 100%;
 }
 
 #root {
-  display: flex;
-  flex: 1;
-  justify-content: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
 }
 
 .App {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.load-defaults {
+    max-width: 160px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    border: none;
+    /* color: white; */
+    background: #e7e7e7;
+    padding: 10px 30px;
 }
