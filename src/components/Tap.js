@@ -10,9 +10,10 @@ const formatIBU = (ibu) => {
 
 class Tap extends Component {
   render () {
-    const abv = formatABV(this.props.abv);
-    const ibu = formatIBU(this.props.ibu);
-    const description = this.props.description || `
+    const beer = this.props.beer;
+    const abv = formatABV(beer.abv);
+    const ibu = formatIBU(beer.ibu);
+    const description = beer.desc || `
     Here goes the beer description, what it tastes like, 
     should be a decently sized paragraph really. Below we'll 
     have specs like IBU and ABV.`
@@ -22,8 +23,8 @@ class Tap extends Component {
           <h2>{this.props.tapName}</h2>
         </div>
         <div className="tapContent">
-          <span className="beer-name">{this.props.beerName}</span>
-          <span className="beer-type">{this.props.beerType}</span>
+          <span className="beer-name">{beer.name}</span>
+          <span className="beer-type">{beer.type}</span>
           <p className="beer-description">{description}</p>
           <span className="beer-stats">{abv} ABV / {ibu} IBU</span>
         </div>
