@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const formatABV = (abv) => {
   return `${abv.toFixed(1)}%`;
@@ -30,6 +31,11 @@ class Tap extends Component {
         </div>
       </div>
     )
+  }
+
+  static PropTypes = {
+    tapName: PropTypes.string.isRequired,
+    beer: PropTypes.object.isRequired
   }
 }
 

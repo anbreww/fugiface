@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './css/App.css';
 
 import TapList from './components/TapList';
 import sampleBeers from './sample_beers';
@@ -27,7 +27,6 @@ class App extends Component {
       context: this,
       state: 'beers'
     });
-    console.log(this.ref)
   }
 
   loadDefaults() {
