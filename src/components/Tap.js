@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const formatABV = (abv) => {
-  return `${abv.toFixed(1)}%`;
-}
+const formatABV = abv => `${abv.toFixed(1)}%`;
 
-const formatIBU = (ibu) => {
-  return `${ibu.toFixed(0)}`;
-}
+const formatIBU = ibu => `${ibu.toFixed(0)}`;
 
 class Tap extends Component {
-  render () {
+  static PropTypes = {
+    tapName: PropTypes.string.isRequired,
+    beer: PropTypes.object.isRequired,
+  }
+
+  render() {
     const beer = this.props.beer;
     const abv = formatABV(beer.abv);
     const ibu = formatIBU(beer.ibu);
     const description = beer.desc || `
-    Here goes the beer description, what it tastes like, 
-    should be a decently sized paragraph really. Below we'll 
-    have specs like IBU and ABV.`
+    Here goes the beer description, what it tastes like,
+    should be a decently sized paragraph really. Below we'll
+    have specs like IBU and ABV.`;
     return (
       <div className="tap">
         <div className="tapName">
@@ -30,12 +31,7 @@ class Tap extends Component {
           <span className="beer-stats">{abv} ABV / {ibu} IBU</span>
         </div>
       </div>
-    )
-  }
-
-  static PropTypes = {
-    tapName: PropTypes.string.isRequired,
-    beer: PropTypes.object.isRequired
+    );
   }
 }
 

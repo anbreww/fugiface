@@ -4,5 +4,5 @@ import TapList from './TapList';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<TapList beers={{}}/>, div);
+  ReactDOM.render(<TapList beers={{}} />, div);
 });

@@ -1,9 +1,14 @@
 import React from 'react';
-import './TapList.css'
+import PropTypes from 'prop-types';
 
+import './TapList.css';
 import Tap from './Tap';
 
 class TapList extends React.Component {
+  static PropTypes = {
+    beers: PropTypes.object.isRequired,
+  }
+
   render() {
     return (
       <div className="tap-page">
@@ -12,11 +17,14 @@ class TapList extends React.Component {
           {
             Object
               .keys(this.props.beers)
-              .map(key => {
+              .map((key) => {
                 return (
-                  <Tap key={key} beer={this.props.beers[key]} 
-                    tapName={key.slice(-1)} />
-                  )
+                  <Tap
+                    key={key}
+                    beer={this.props.beers[key]}
+                    tapName={key.slice(-1)}
+                  />
+                );
               })
           }
         </div>

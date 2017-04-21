@@ -15,23 +15,23 @@ class App extends Component {
     this.state = {
       beers: {},
       taps: {},
-      kegeratorId: "v2"
-    }
+      kegeratorId: 'v2',
+    };
   }
 
   componentWillMount() {
     // called just before rendering occurs
     // we'll want to replace this.state by the App params probably'
     this.ref = base.syncState(`${this.state.kegeratorId}/beers`,
-    {
-      context: this,
-      state: 'beers'
-    });
+      {
+        context: this,
+        state: 'beers',
+      });
   }
 
   loadDefaults() {
     this.setState({
-      beers: sampleBeers
+      beers: sampleBeers,
     });
   }
 
